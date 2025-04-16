@@ -1,2 +1,2 @@
 import os
-os.makedirs('datasets', exist_ok=True)
+os.makedirs('../datasets', exist_ok=True)
