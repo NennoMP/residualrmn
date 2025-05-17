@@ -5,8 +5,7 @@ Here, you can find instructions for reproducing analyses and experiments present
 In `eigenspectrum.ipynb` you can find a small tutorial to replicate the eigenspectrum analyses presented in Figure 2, for the orthogonal matrices, and in Figure 3, for ResRMN's Jacobian.
 
 ## Classification
-In `residualrmn_configs.sh`, for each ResRMN configuration and dataset, you can find the optimal configurations identified during model selection and used in our experiments.
-Before running any test, make sure to download the relevant files from [https://www.timeseriesclassification.com/](https://www.timeseriesclassification.com/) and unzip them in `datasets/<dataset_name>`.
+In `residualrmn_configs.sh`, for each ResRMN configuration and dataset, you can find the optimal configurations identified during model selection and used in our experiments. Datasets are automatically downloaded to `datasets/` from [https://www.timeseriesclassification.com/](https://www.timeseriesclassification.com/) leveraging `aeon` toolkit.
 
 For instance, to test ResRMN on the **Adiac** dataset across $10$ different random initializations, run the following:
 
