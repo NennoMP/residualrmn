@@ -1,4 +1,6 @@
 # Residual Reservoir Memory Networks
+[[paper]](https://arxiv.org/pdf/2508.09925)
+
 Official code for _Residual Reservoir Memory Networks_, IJCNN (2025) paper.
 
 ### Abstract
@@ -18,5 +20,10 @@ See the [experiments guide](./experiments/README.md) for instructions on reprodu
 ### Citation
 If you use the code in this repository, consider citing our paper:
 ```
-PLACEHOLDER
+@article{pinna2025residual,
+  title={Residual Reservoir Memory Networks},
+  author={Pinna, Matteo and Ceni, Andrea and Gallicchio, Claudio},
+  journal={arXiv preprint arXiv:2508.09925},
+  year={2025}
+}
 ```
