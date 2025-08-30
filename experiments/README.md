@@ -1,7 +1,7 @@
 # Experiments
 Here, you can find instructions for reproducing analyses and experiments presented in the manuscripts.
 
-# Eigenspectrum analysis
+## Eigenspectrum analysis
 In `eigenspectrum.ipynb` you can find a small tutorial to replicate the eigenspectrum analyses presented in Figure 2, for the orthogonal matrices, and in Figure 3, for ResRMN's Jacobian.
 
 ## Classification

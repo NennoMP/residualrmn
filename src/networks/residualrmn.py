@@ -5,7 +5,6 @@ Note that the concept of reservoir memory networks has been introduced in [1].
 References:
 [1] C. Gallicchio and A. Ceni, Reservoir Memory Networks, ESANN (2024)
 """
-from typing import Optional, Tuple
 
 import torch
 import torch.nn as nn
@@ -16,27 +15,28 @@ import src.networks.reservoir as reservoir
 
 class ResidualRMN(nn.Module):
     """Residual Reservoir Memory Network (ResRMN).
-        
-    ResRMN is characterized by a modular and hierarchical structure, combining a linear memory 
-    reservoir and a non-linear reservoir based on temporal residual connections.
+
+    ResRMN is characterized by a modular and hierarchical structure, combining a linear
+    memory reservoir and a non-linear reservoir based on temporal residual connections.
     """
+
     def __init__(
         self,
         in_size: int = 1,
         # Memory module parameters
         n_units_m: int = 100,
-        in_scaling_m: float = 1.,
-        bias_scaling_m: float = 0.,
+        in_scaling_m: float = 1.0,
+        bias_scaling_m: float = 0.0,
         # Non-linear module parameters
         n_units: int = 100,
         act: nn.Module = nn.Tanh(),
-        in_scaling: float = 1.,
-        memory_scaling: float = 1.,
-        bias_scaling: float = 0.,
-        rho: float = 1.,
-        alpha: float = 1.,
-        beta: float = 1.,
-        **kwargs
+        in_scaling: float = 1.0,
+        memory_scaling: float = 1.0,
+        bias_scaling: float = 0.0,
+        rho: float = 1.0,
+        alpha: float = 1.0,
+        beta: float = 1.0,
+        **kwargs,
     ) -> None:
         """
         Args:
@@ -51,13 +51,14 @@ class ResidualRMN(nn.Module):
             in_scaling: Scaling for the input kernel of the non-linear reservoir
             memory_scaling: Scaling for the memory kernel of the non-linear reservoir.
             bias_scaling: Scaling for the bias vector of the non-linear reservoir.
-            rho: Spectral radius used to rescale the recurrent kernel of the non-linear reservoir.
+            rho: Spectral radius used to rescale the recurrent kernel of the non-linear
+            reservoir.
             alpha: Scaling coefficient for the temporal residual connections.
             beta: Scaling coefficient for the non-linear branch.
         """
         super().__init__()
         self.__dict__.update(kwargs)
-        
+
         self.in_size = in_size
         # Memory module parameters
         self.n_units_m = n_units_m
@@ -72,7 +73,7 @@ class ResidualRMN(nn.Module):
         self.rho = rho
         self.alpha = alpha
         self.beta = beta
-        
+
         # Initialize modules
         self._make_layers()
 
@@ -103,7 +104,7 @@ class ResidualRMN(nn.Module):
             )
         )
 
-    def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]: 
+    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
         """
         Args:
             x: External input tensor of shape (batch_size, T, in_size).
@@ -118,13 +119,13 @@ class ResidualRMN(nn.Module):
 
 
 def residualrmn_(hparams: dict) -> ResidualRMN:
-    if 'skip_option_t' not in hparams:
+    if "skip_option_t" not in hparams:
         raise ValueError(
-            "Required parameter 'skip_option_t' is missing. Options are 'ortho', 'cycle', and 'identity'."
+            "Required parameter 'skip_option_t' is missing. Options are 'ortho', "
+            "'cycle', and 'identity'."
         )
     model = ResidualRMN(**hparams)
     model.nonlinear_reservoir.cell.O = init_utils.init_orthogonal(
-        M=model.nonlinear_reservoir.cell.n_units,
-        ortho_config=hparams['skip_option_t']
+        M=model.nonlinear_reservoir.cell.n_units, ortho_config=hparams["skip_option_t"]
     )
     return model

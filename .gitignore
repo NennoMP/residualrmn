@@ -9,9 +9,9 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
-datasets/**
-!datasets/*/
-!datasets/MNIST/permutation.json
+data/**
+!data/*/
+!data/MNIST/permutation.json
 develop-eggs/
 dist/
 downloads/
