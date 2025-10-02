@@ -14,7 +14,7 @@ This repository contains the official code for the paper:
 
 ```
 Residual Reservoir Memory Networks,
-Matteo Pinna, Andrea Ceni, Claudio Gallicchio
+Matteo Pinna, Andrea Ceni, Claudio Gallicchio,
 International Joint Conference on Neural Networks (IJCNN), 2025.
 ```
 
