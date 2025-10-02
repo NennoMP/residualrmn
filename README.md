@@ -22,7 +22,7 @@ International Joint Conference on Neural Networks (IJCNN), 2025.
 We introduce a novel class of untrained Recurrent Neural Networks (RNNs) within the Reservoir Computing (RC) paradigm, called Residual Reservoir Memory Networks (ResRMNs). ResRMN combines a linear memory reservoir with a non-linear reservoir, where the latter is based on residual orthogonal connections along the temporal dimension for enhanced long-term propagation of the input. The resulting reservoir state dynamics are studied through the lens of linear stability analysis, and we investigate diverse configurations for the temporal residual connections. The proposed approach is empirically assessed on time-series and pixel-level 1-D classification tasks. Our experimental results highlight the advantages of the proposed approach over other conventional RC models.
 
 <div align="center">
-<img src="assets/figure-1.png?raw=true" alt="Model" title="Model">
+<img src="assets/figure.png?raw=true" alt="Model" title="Model">
 </div>
 <figcaption><em><strong>
 Architecture of ResRMN.</strong> The model consists of two untrained components: (i) a linear memory reservoir driven by the external input $x$ and (ii) a non-linear residual reservoir driven by both the external input x and the output $m$ of the memory reservoir. The final output is fed to a simple (linear) readout layer trained in closed-form, which is the only trainable component.
