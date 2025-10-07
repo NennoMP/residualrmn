@@ -24,9 +24,6 @@ We introduce a novel class of untrained Recurrent Neural Networks (RNNs) within 
 <div align="center">
 <img src="assets/figure.png?raw=true" alt="Model" title="Model">
 </div>
-<figcaption><em><strong>
-Architecture of ResRMN.</strong> The model consists of two untrained components: (i) a linear memory reservoir driven by the external input $x$ and (ii) a non-linear residual reservoir driven by both the external input x and the output $m$ of the memory reservoir. The final output is fed to a simple (linear) readout layer trained in closed-form, which is the only trainable component.
-</em></figcaption>
 
 ## Setup
 To install the required dependencies:
