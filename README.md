@@ -4,6 +4,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2508.09925-b31b1b.svg)](https://arxiv.org/abs/2508.09925)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-yellow)](https://huggingface.co/papers/2508.09925)
+[![DOI](https://img.shields.io/badge/DOI-10.1109/IJCNN64981.2025.11227859-blue.svg)](https://doi.org/10.1109/IJCNN64981.2025.11227859)
 
 ![code-quality](https://github.com/nennomp/residualrmn/actions/workflows/code-quality.yml/badge.svg)
 [![license](https://img.shields.io/badge/License-MIT-green.svg?labelColor=gray)](https://github.com/nennomp/residualrmn)
