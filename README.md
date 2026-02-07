@@ -40,10 +40,12 @@ See the [experiments guide](./experiments/README.md) for instructions on reprodu
 ## Citation
 If you use the model or code in this repository, consider citing our paper:
 ```
-@article{pinna2025residual,
-  title={Residual Reservoir Memory Networks},
+@inproceedings{pinna2025residual,
+  title={Residual reservoir memory networks},
   author={Pinna, Matteo and Ceni, Andrea and Gallicchio, Claudio},
-  journal={arXiv preprint arXiv:2508.09925},
-  year={2025}
+  booktitle={2025 International Joint Conference on Neural Networks (IJCNN)},
+  pages={1--7},
+  year={2025},
+  organization={IEEE}
 }
 ```
